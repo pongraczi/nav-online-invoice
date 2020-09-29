@@ -10,11 +10,15 @@ class Config {
     public $software;
 
     public $baseUrl;
-    public $verifySLL = false;
+    public $verifySLL = null; // DEPRECATED and will be removed from v3.0, since it's a typo
+    public $verifySSL = false;
 
     public $validateApiSchema = true;
 
     public $curlTimeout = null;
+
+    // `queryTaxpayer` válasz XML-jében a 'ns2' automatikus eltávolítása
+    public $removeNamespaces = true;
 
     /** @var RequestIdGeneratorInterface */
     public $requestIdGenerator;
